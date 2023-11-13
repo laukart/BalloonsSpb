@@ -1,0 +1,79 @@
+@import '_reset';
+@import '_animation';
+@import '_btn';
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #777;
+	font-size: 1.6rem;
+	letter-spacing: 0.2rem;
+	background: white;
+	padding: 5rem;
+}
+
+.container {
+	background: #f7f7f7;
+}
+
+.header {
+	position: relative;
+	height: 95vh;
+	background: linear-gradient(
+			90deg,
+			rgba(186, 133, 84, 0.7) 0.03%,
+			rgba(1, 1, 1, 0.7) 99.94%
+		),
+		url(../assets/headerbg.jpg) center / cover no-repeat;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+
+	&__logo {
+		position: absolute;
+		left: 5rem;
+		top: 5rem;
+		width: 5.6rem;
+		height: 7rem;
+	}
+
+	&__box {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.title-first {
+	color: #fff;
+	&__main {
+		text-transform: uppercase;
+		display: block;
+		font-size: 5rem;
+		font-weight: 800;
+		line-height: normal;
+		letter-spacing: 1rem;
+		margin-bottom: 1rem;
+		animation-name: leftToRight;
+		animation-duration: 1.5s;
+		animation-timing-function: ease;
+		backface-visibility: hidden;
+	}
+	&__secondary {
+		display: block;
+		font-size: 4rem;
+		font-weight: 200;
+		line-height: normal;
+		letter-spacing: 0.5rem;
+		animation-name: rightToLeft;
+		animation-duration: 1.5s;
+		animation-timing-function: ease;
+		backface-visibility: hidden;
+		margin-bottom: 6.5rem;
+	}
+}
